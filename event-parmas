@@ -1,6 +1,6 @@
 SELECT
     TIMESTAMP_MICROS(event_timestamp) as event_timestamp,
-    #user_pseudo_id,
+    user_pseudo_id,
     event_name,
     lower((select value.string_value from unnest(event_params) where key = 'source')) as all_event_source,
     lower((select value.string_value from unnest(event_params) where key = 'medium')) as all_event_medium,
