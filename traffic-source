@@ -1,6 +1,6 @@
 SELECT
     TIMESTAMP_MICROS(event_timestamp) as event_timestamp,
-    #user_pseudo_id,
+    user_pseudo_id,
     event_name,
     traffic_source.source as first_user_source,
     traffic_source.medium as first_user_medium,
