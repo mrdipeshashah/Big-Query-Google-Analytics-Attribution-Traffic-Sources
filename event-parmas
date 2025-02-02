@@ -1,0 +1,9 @@
+SELECT
+    TIMESTAMP_MICROS(event_timestamp) as event_timestamp,
+    #user_pseudo_id,
+    event_name,
+    lower((select value.string_value from unnest(event_params) where key = 'source')) as all_event_source,
+    lower((select value.string_value from unnest(event_params) where key = 'medium')) as all_event_medium,
+    lower((select value.string_value from unnest(event_params) where key = 'campaign')) as all_event_campaign,
+from `enter.tablename_123456.events_*`
+GROUP BY ALL
