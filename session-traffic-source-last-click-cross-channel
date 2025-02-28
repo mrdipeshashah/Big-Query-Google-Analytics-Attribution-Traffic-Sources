@@ -1,0 +1,9 @@
+SELECT
+    TIMESTAMP_MICROS(event_timestamp) as event_timestamp,
+    user_pseudo_id,
+    event_name,
+    session_traffic_source_last_click.cross_channel_campaign.source as first_session_source,
+    session_traffic_source_last_click.cross_channel_campaign.medium as first_session_medium,
+    session_traffic_source_last_click.cross_channel_campaign.source as first_session_campaign,
+from `enter.tablename_123456.events_*`
+GROUP BY ALL
