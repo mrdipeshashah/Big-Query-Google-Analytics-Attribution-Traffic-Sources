@@ -11,8 +11,11 @@ SELECT
     collected_traffic_source.manual_source as first_event_source,
     collected_traffic_source.manual_medium as first_event_medium,
     collected_traffic_source.manual_campaign_name as first_event_campaign,
-    session_traffic_source_last_click.manual_campaign.source as first_session_source,
-    session_traffic_source_last_click.manual_campaign.medium as first_session_medium,
-    session_traffic_source_last_click.manual_campaign.campaign_name as first_session_campaign,
+    session_traffic_source_last_click.manual_campaign.source as firstclick_session_source,
+    session_traffic_source_last_click.manual_campaign.medium as firstclick_session_medium,
+    session_traffic_source_last_click.manual_campaign.campaign_name as firstclick_session_campaign,
+    session_traffic_source_last_click.cross_channel_campaign.source as firstcross_session_source,
+    session_traffic_source_last_click.cross_channel_campaign.medium as firstcross_session_medium,
+    session_traffic_source_last_click.cross_channel_campaign.source as firstcross_session_campaign,
 from `enter.tablename_123456.events_*`
 GROUP BY ALL
