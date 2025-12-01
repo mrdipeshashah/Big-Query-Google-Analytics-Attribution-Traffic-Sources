@@ -2,8 +2,8 @@ SELECT
     TIMESTAMP_MICROS(event_timestamp) as event_timestamp,
     user_pseudo_id,
     event_name,
-    traffic_source.source as first_user_source,
-    traffic_source.medium as first_user_medium,
-    traffic_source.name as first_user_campaign,
+    traffic_source.source as user_source,
+    traffic_source.medium as user_medium,
+    traffic_source.name as user_campaign,
 from `enter.tablename_123456.events_*`
 GROUP BY ALL
