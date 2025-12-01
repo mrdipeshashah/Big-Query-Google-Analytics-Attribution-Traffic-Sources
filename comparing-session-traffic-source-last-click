@@ -2,11 +2,10 @@ SELECT
     TIMESTAMP_MICROS(event_timestamp) as event_timestamp,
     user_pseudo_id,
     event_name,
-    session_traffic_source_last_click.manual_campaign.source as firstclick_session_source,
-    session_traffic_source_last_click.manual_campaign.medium as firstclick_session_medium,
-    session_traffic_source_last_click.manual_campaign.campaign_name as firstclick_session_campaign,
-    session_traffic_source_last_click.cross_channel_campaign.source as firstcross_session_source,
-    session_traffic_source_last_click.cross_channel_campaign.medium as firstcross_session_medium,
-    session_traffic_source_last_click.cross_channel_campaign.source as firstcross_session_campaign,
+    session_traffic_source_last_click.manual_campaign.source as lastclick_manual_session_source,
+    session_traffic_source_last_click.manual_campaign.medium as lastclick_manual_session_medium,
+    session_traffic_source_last_click.manual_campaign.campaign_name as lastclick_manual_session_campaign,
+    session_traffic_source_last_click.cross_channel_campaign.source as lastclick_crosschannel_session_source,
+    session_traffic_source_last_click.cross_channel_campaign.medium as lastclick_crosschannel_session_medium,
 from `enter.tablename_123456.events_*`
 GROUP BY ALL
