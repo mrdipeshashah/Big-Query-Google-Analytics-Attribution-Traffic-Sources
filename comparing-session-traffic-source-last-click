@@ -7,5 +7,6 @@ SELECT
     session_traffic_source_last_click.manual_campaign.campaign_name as lastclick_manual_session_campaign,
     session_traffic_source_last_click.cross_channel_campaign.source as lastclick_crosschannel_session_source,
     session_traffic_source_last_click.cross_channel_campaign.medium as lastclick_crosschannel_session_medium,
-from `enter.tablename_123456.events_*`
+    session_traffic_source_last_click.cross_channel_campaign.campaign_name as lastclick_crosschannel_session_campaign,
+    from `enter.tablename_123456.events_*`
 GROUP BY ALL
