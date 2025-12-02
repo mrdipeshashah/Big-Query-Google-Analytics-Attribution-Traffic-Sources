@@ -1,4 +1,4 @@
-Understanding the different data scopes and which traffic sources in the BQ export can be used 
+Understanding the different data scopes and which traffic sources in the BQ export can be used  
 
 User-level data: How a user first found the website = traffic_source 
 
